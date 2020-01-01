@@ -1,0 +1,14 @@
+{{ define "header" }}
+<h1 id="hugo-index-title">{{ .Site.Title }}</h1>
+<span id="hugo-index-subtitle">{{ .Site.Params.Description }}</span>
+{{ end }}
+
+{{ define "main" }}
+<nav id="hugo-index-content" class="menu">
+    <ol>
+        {{ range .Site.Menus.main.ByWeight }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ol>
+</nav>
+{{ end }}

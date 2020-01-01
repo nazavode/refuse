@@ -1,0 +1,21 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<article>
+    <h1 id="hugo-single-title">{{ .Title }}</h1>
+    {{ if .Date }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}" pubdate="pubdate"></time>
+        <span id="hugo-single-subtitle">{{ .Date.Format "January 2, 2006" }}</span>
+    {{ end }}
+    <div id="hugo-single-content">
+    {{ .Content }}
+    </div>
+</article>
+{{ end }}
+
+{{define "footer"}}
+{{ partial "feedback.html" . }}
+{{ partial "copyright.html" . }}
+{{end}}

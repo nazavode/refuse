@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ if eq hugo.Environment "production" }}
+    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/all.min.css" />
+    {{ else }}
+    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+    {{ end }}
+    <title>
+        {{- block "title" . -}}
+        {{- .Site.Title -}}
+        {{- end -}}
+    </title>
+    {{- block "head" . -}}
+    {{- end -}}
+</head>
+
+<body>
+    <header>
+        {{- block "header" . -}}
+        {{ partial "breadcrumb.html" . }}
+        {{- end -}}
+    </header>
+    <main>
+        {{- block "main" . -}}
+        {{- end -}}
+    </main>
+    <footer>
+        {{- block "footer" . -}}
+        {{ partial "copyright.html" . }}
+        {{- end -}}
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+name = "refuse"
+license = "MIT"
+licenselink = "https://github.com/nazavode/refuse/blob/master/LICENSE"
+description = "Minimal blog theme that refuses bloat."
+homepage = "http://example.com/"
+tags = ["minimal"]
+features = ["blog", "menu", "breadcrumb", "feedback", "syntax highlighting", "rss"]
+min_version = "0.62.0"
+
+[author]
+  name = "Federico Ficarelli"
+  homepage = "https://nazavode.github.io"
+
+[original]
+  name = "Basic"
+  homepage = "https://github.com/siegerts/hugo-theme-basic"
+  repo = "https://github.com/siegerts/hugo-theme-basic"
