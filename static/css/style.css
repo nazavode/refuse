@@ -16,7 +16,8 @@ html {
 
 body {
     margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    /* Fonts selection taken from here: https://github.com/mvasilkov/systematize */
+    font-family: -apple-system, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', sans-serif;
     color: rgba(0, 0, 0, 0.8);
     text-rendering: optimizeLegibility;
 }
@@ -57,7 +58,8 @@ nav ul {
 
 code,
 pre {
-    font-family: monocode, monospace;
+    /* Fonts selection taken from here: https://github.com/mvasilkov/systematize */
+    font-family: 'SFMono-Regular', 'SF Mono', 'Ubuntu Mono', Consolas, 'DejaVu Sans Mono', Menlo, monospace;
     font-size: 1em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
