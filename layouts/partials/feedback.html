@@ -1,4 +1,4 @@
-{{ if not .Params.FeedbackDisable }}
+{{ if or (not (isset .Params "feedback")) (.Params.Feedback) }}
 <div id="hugo-feedback">
     {{ if .Site.Params.Feedback.Github }}
         For comments, feedback and absolutely everything related to this post,
