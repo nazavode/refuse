@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/nazavode/refuse/blob/master/LICENSE"
 description = "Minimal blog theme that refuses bloat."
 homepage = "https://github.com/nazavode/refuse"
-tags = ["minimal"]
+tags = ["blog", "personal", "responsive", "minimal", "clean", "simple", "light", "syntax highlighting", "fast", "customizable", "minimalistic", "technical"]
 features = ["blog", "menu", "breadcrumb", "feedback", "syntax highlighting", "rss"]
 min_version = "0.62.0"
 
