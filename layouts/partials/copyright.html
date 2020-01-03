@@ -1,3 +1,5 @@
+{{ if .Site.Params.Copyright }}
 <div id="hugo-copyright">
     &copy; {{ now.Format "2006" }} {{ .Site.Params.Copyright | safeHTML }} All rights reserved.
 </div>
+{{ end }}
