@@ -1,12 +1,11 @@
 {{ if or (not (isset .Params "feedback")) (.Params.Feedback) }}
 <div id="hugo-feedback">
     {{ if .Site.Params.Feedback.Github }}
-        For comments, feedback and absolutely everything related to this post,
-        please consider
+        For comments and feedback please consider
         {{ if .Params.FeedbackGithubIssue }}
-        reaching out <a href="https://github.com/{{ .Site.Params.Feedback.Github }}/issues/{{ .Params.FeedbackGithubIssue }}">here</a>, thanks!
+        reaching out <a href="https://github.com/{{ .Site.Params.Feedback.Github }}/issues/{{ .Params.FeedbackGithubIssue }}">here</a>.
         {{else}}
-        opening an issue <a href="https://github.com/{{ .Site.Params.Feedback.Github }}/issues">here</a>, thanks!
+        opening an issue <a href="https://github.com/{{ .Site.Params.Feedback.Github }}/issues">here</a>.
         {{ end }}
     {{ end }}
 </div>
