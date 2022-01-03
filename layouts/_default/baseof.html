@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {{ if eq hugo.Environment "production" }}
-    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/all.min.css" />
-    {{ else }}
-    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css" />
-    <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
-    {{ end }}
+    {{ $CSS := resources.Match "css/**.css" | resources.Concat "main.css" }}
+    {{ if hugo.IsProduction }}
+        {{ $CSS = $CSS | minify | resources.Fingerprint site.Params.digest }}
+    {{end}}
+    <link type=text/css rel=stylesheet href={{ $CSS.RelPermalink }} {{ if hugo.IsProduction }} integrity={{ $CSS.Data.Integrity }} {{end}} media="all" />
     <title>
         {{- block "title" . -}}
         {{- .Site.Title -}}
