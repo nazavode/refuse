@@ -1,0 +1,4 @@
+<li id="hugo-list-item">
+    <a href="{{ .Get "url" }}" id="hugo-list-item-title">{{ .Get "title" | markdownify }}</a>
+    <p id="hugo-list-item-subtitle">{{ .Inner | markdownify }}</p>
+</li>
